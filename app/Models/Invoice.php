@@ -3,9 +3,11 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Traits\BelongsToRestaurant;
 
 class Invoice extends Model
 {
+    use BelongsToRestaurant;
      protected $fillable = [
         'restaurant_id',
         'order_ids',
